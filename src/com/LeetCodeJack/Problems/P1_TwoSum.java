@@ -7,7 +7,7 @@ import java.util.HashMap;
 //        Because nums[0]+nums[1]=2+7=9,
 //        return[0,1].
 
-public class TwoSum1 {
+public class P1_TwoSum {
 //    private int[] inputArray;
 //    private int targetValue;
 //    private HashMap<Integer, Integer> inputHash=new HashMap<>();

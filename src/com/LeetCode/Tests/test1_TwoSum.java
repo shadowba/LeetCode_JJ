@@ -5,13 +5,13 @@ package com.LeetCode.Tests;
 //        Because nums[0]+nums[1]=2+7=9,
 //        return[0,1].
 
-import com.LeetCodeJack.Problems.TwoSum1;
+import com.LeetCodeJack.Problems.P1_TwoSum;
 import java.util.Arrays;
 
-public class testTwoSum1 {
+public class test1_TwoSum {
     public static void main(String[] args) {
         int[] nums={3,2,4};
-        TwoSum1 twoSum=new TwoSum1();
+        P1_TwoSum twoSum=new P1_TwoSum();
         System.out.println(Arrays.toString(twoSum.twoSum(nums,6)));
     }
 }
