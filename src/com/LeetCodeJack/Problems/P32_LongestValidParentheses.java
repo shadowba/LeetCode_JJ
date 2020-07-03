@@ -4,12 +4,34 @@ import java.util.Stack;
 
 public class P32_LongestValidParentheses {
     public int longestValidParentheses(String s) {
-//        int result = 0;
-//        int N = s.length();
-//        if (s == null || s.length() == 0)
-//            return result;
-//        Stack<Character> strStack = new Stack<>();
-//        char[] charArr = s.toCharArray();
+        int maxRes = 0;
+        if (s == null || s.length() == 0)
+            return maxRes;
+        Stack<Integer> strStack = new Stack<>();
+        char[] charArr = s.toCharArray();
+        int N = s.length();
+
+        int i = 0;
+        int mostLeft = -1;
+        strStack.push(mostLeft);
+        while (i < N) {
+            if (charArr[i] == '(')
+                strStack.push(i);
+            else {
+                strStack.pop();
+                if (strStack.isEmpty()) {
+                    strStack.push(i);
+                    i++;
+//                    maxRes = 0;
+                    continue;
+                } else {
+                    maxRes = Math.max(maxRes, i - strStack.peek());
+                }
+            }
+            i++;
+        }
+        return maxRes;
+    }
 //
 //        int i = 0;
 //        int lastIndex = 0;
@@ -26,5 +48,5 @@ public class P32_LongestValidParentheses {
 //            i++;
 //        }
 //        return result;
-    }
+
 }
