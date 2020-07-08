@@ -1,5 +1,7 @@
 package com.LeetCodeJack.Problems;
 
+import com.EssentialClasses.ListNode;
+
 public class P21_MergeTwoSortedLists {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode();

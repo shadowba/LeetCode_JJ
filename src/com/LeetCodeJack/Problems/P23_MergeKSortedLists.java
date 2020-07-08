@@ -1,5 +1,7 @@
 package com.LeetCodeJack.Problems;
 
+import com.EssentialClasses.ListNode;
+
 public class P23_MergeKSortedLists {
     public ListNode mergeKLists(ListNode[] lists) {
         if(lists.length == 0)

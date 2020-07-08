@@ -1,5 +1,7 @@
 package com.LeetCodeJack.Problems;
 
+import com.EssentialClasses.ListNode;
+
 public class P83_RemoveDuplicatesFromSortedList {
     public ListNode deleteDuplicates(ListNode head) {
         ListNode dummyNode = new ListNode();

@@ -1,5 +1,7 @@
 package com.LeetCodeJack.Problems;
 
+import com.EssentialClasses.ListNode;
+
 public class P19_RemoveNthNodeFromEndofList {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode left=head;

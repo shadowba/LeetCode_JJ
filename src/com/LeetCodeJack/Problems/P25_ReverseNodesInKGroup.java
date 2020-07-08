@@ -1,5 +1,7 @@
 package com.LeetCodeJack.Problems;
 
+import com.EssentialClasses.ListNode;
+
 public class P25_ReverseNodesInKGroup {
     public ListNode reverseKGroup(ListNode head, int k) {
         if (head == null)

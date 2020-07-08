@@ -1,6 +1,6 @@
 package com.LeetCodeJack.Problems;
 
-import java.util.List;
+import com.EssentialClasses.ListNode;
 
 /**
  * Definition for singly-linked list.

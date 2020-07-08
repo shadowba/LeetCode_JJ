@@ -1,4 +1,4 @@
-package com.LeetCodeJack.Problems;
+package com.EssentialClasses;
 
 public class ListNode {
     public int val;

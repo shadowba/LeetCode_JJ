@@ -1,6 +1,6 @@
 package com.LeetCode.Tests;
 
-import com.LeetCodeJack.Problems.ListNode;
+import com.EssentialClasses.ListNode;
 import com.LeetCodeJack.Problems.P21_MergeTwoSortedLists;
 
 public class test21_MergeTwoSortedLists {

@@ -1,6 +1,6 @@
 package com.LeetCode.Tests;
 
-import com.LeetCodeJack.Problems.ListNode;
+import com.EssentialClasses.ListNode;
 import com.LeetCodeJack.Problems.P2_AddTwoNumbers;
 
 public class test2_AddTwoNumbers {

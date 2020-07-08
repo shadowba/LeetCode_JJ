@@ -1,5 +1,7 @@
 package com.LeetCodeJack.Problems;
 
+import com.EssentialClasses.ListNode;
+
 public class P24_SwapNodesInPairs {
     public ListNode swapPairs(ListNode head) {
         ListNode dummyHead = new ListNode(0);

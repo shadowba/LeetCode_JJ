@@ -1,5 +1,7 @@
 package com.LeetCodeJack.Problems;
 
+import com.EssentialClasses.ListNode;
+
 public class P141_LinkedListCycle {
     public class Solution {
         public boolean hasCycle(ListNode head) {
