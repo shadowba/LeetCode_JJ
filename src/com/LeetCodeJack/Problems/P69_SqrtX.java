@@ -6,13 +6,13 @@ public class P69_SqrtX {
         int left = 0;
         int right = (int)Math.sqrt(Integer.MAX_VALUE);
 
-        while (right > left + 1) {
+        while (left <= right) {
             int middle = left + (right - left) / 2;
             if(middle * middle == x) return middle;
             else if(x > middle * middle)
-                left = middle;
+                left = middle + 1;
             else
-                right = middle;
+                right = middle - 1;
         }
         if(right * right <= x) return right;
         else
