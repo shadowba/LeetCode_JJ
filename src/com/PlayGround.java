@@ -7,9 +7,8 @@ import com.LeetCodeJack.Problems3.*;
 import java.util.*;
 public class PlayGround {
     public static void main(String[] args) {
-        P134_M_GasStation tester = new P134_M_GasStation();
-        int[] gas  = {1,2,3,4,5};
-        int[] cost = {3,4,5,1,2};
-        tester.canCompleteCircuit(gas,cost);
+        P201_M_BitwiseANDOfNumbersRange tester = new P201_M_BitwiseANDOfNumbersRange();
+        int res = tester.rangeBitwiseAnd(20000, 2147483647);
+        System.out.println(res);
     }
 }
