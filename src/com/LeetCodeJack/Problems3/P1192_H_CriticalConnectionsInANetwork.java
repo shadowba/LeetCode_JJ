@@ -4,7 +4,7 @@ import java.util.*;
 
 //https://www.bilibili.com/video/av626130717/
 
-public class P1192_M_CriticalConnectionsInANetwork {
+public class P1192_H_CriticalConnectionsInANetwork {
     List<List<Integer>> resList;
     Map<Integer, List<Integer>> connectionMap;
 

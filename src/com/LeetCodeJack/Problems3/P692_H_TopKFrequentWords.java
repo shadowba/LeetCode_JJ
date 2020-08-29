@@ -2,7 +2,7 @@ package com.LeetCodeJack.Problems3;
 
 import java.util.*;
 
-public class P692_M_TopKFrequentWords {
+public class P692_H_TopKFrequentWords {
     Map<String, Integer> dicFreq;
     public List<String> topKFrequent(String[] words, int k) {
         List<String> resList  =new ArrayList<>();
