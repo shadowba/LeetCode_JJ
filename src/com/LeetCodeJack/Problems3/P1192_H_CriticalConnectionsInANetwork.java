@@ -5,39 +5,39 @@ import java.util.*;
 //https://www.bilibili.com/video/av626130717/
 
 public class P1192_H_CriticalConnectionsInANetwork {
+    Map<Integer, List<Integer>> network;
     List<List<Integer>> resList;
-    Map<Integer, List<Integer>> connectionMap;
-
     public List<List<Integer>> criticalConnections(int n, List<List<Integer>> connections) {
-        resList=new ArrayList<>();
-        connectionMap = new HashMap<>();
-        int[] id = new int[n];
-        Arrays.fill(id, -1);
+        int[] IDs = new int[n];
+        resList = new ArrayList<>();
+        Arrays.fill(IDs, -1);
+        network = new HashMap<>();
+
         for (List<Integer> connection : connections) {
-            if (!connectionMap.containsKey(connection.get(0)))
-                connectionMap.put(connection.get(0), new ArrayList<>());
-            connectionMap.get(connection.get(0)).add(connection.get(1));
-            if (!connectionMap.containsKey(connection.get(1)))
-                connectionMap.put(connection.get(1), new ArrayList<>());
-            connectionMap.get(connection.get(1)).add(connection.get(0));
+            network.putIfAbsent(connection.get(0), new ArrayList<>());
+            network.putIfAbsent(connection.get(1), new ArrayList<>());
+            network.get(connection.get(0)).add(connection.get(1));
+            network.get(connection.get(1)).add(connection.get(0));
         }
-        dfs(-1, 0, 0, id);
-        System.out.println(Arrays.toString(id));
+        dfsHelper(-1,0,0,IDs);
         return resList;
     }
 
-    private int dfs(int father, int node, int nodeID, int[] id) {
-        id[node] = nodeID;
-        for (int child : connectionMap.get(node)) {
-            if (child == father) continue;
-            else if (id[child] == -1)
-                id[node] = Math.min(nodeID, dfs(node, child, nodeID + 1, id));
-            else
-                id[node] = Math.min(nodeID, id[child]);
+    private int dfsHelper(int father, int node, int ID, int[] IDs) {
+        IDs[node] = ID;
+        int tempId;
+        for (int child : network.get(node)) {
+            if (child == father)
+                continue;
+            else if (IDs[child] == -1) {
+                IDs[node] = Math.min(IDs[node], dfsHelper(node, child, ID+1, IDs));
+            }else{
+                IDs[node] = Math.min(IDs[node], IDs[child]);
+            }
         }
-        if (id[node] == nodeID){
-            resList.add(Arrays.asList(father,node));
+        if(IDs[node] == ID && father != -1){
+            resList.add(Arrays.asList(father, node));
         }
-        return id[node];
+        return IDs[node];
     }
 }
